@@ -2,7 +2,7 @@
   $(SimpleGeoMap).bind('loaded', function() {
     var positions, icon, tmp_ids, last_marker, default_zoom;
     positions = $('.geo');
-    if (positions.length > 0) {
+    if (positions.length == 1) {
       icon = new google.maps.Icon();
       icon.image = Drupal.settings.simpleGeoMap.images + '/location.png';
       icon.iconSize = new GSize(24, 24);

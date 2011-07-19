@@ -409,6 +409,9 @@ var SimpleGeoMap = {};
         var segments = persisted.split('/'),
           positioning = segments[0].split('p'),
           c = new GLatLng(parseFloat(positioning[1]), parseFloat(positioning[2]));
+        for(i = 0; i < segments.length; i++) {
+          segments[i] = decodeURI(segments[i]);
+        }
         map.setCenter(c, parseInt(positioning[0], 10));
         filterPresets[segments[1]] = segments.slice(2);
         urlRepresentation = segments.slice(2).join('/');

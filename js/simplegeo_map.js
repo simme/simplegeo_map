@@ -409,7 +409,7 @@ var SimpleGeoMap = {};
         var segments = persisted.split('/'),
           positioning = segments[0].split('p'),
           c = new GLatLng(parseFloat(positioning[1]), parseFloat(positioning[2]));
-        if(navigator.userAgent.indexOf('MSIE') == -1) {
+        if(navigator.userAgent.indexOf('Firefox') != -1) {
           for(i = 0; i < segments.length; i++) {
             segments[i] = decodeURIComponent(segments[i]);
           }
